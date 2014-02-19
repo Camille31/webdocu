@@ -13,7 +13,17 @@ var videoTitle = "Demo";
 $(document).ready(function () {
 
     // layout config
+
+    // set width and height of center media in order to make it the biggest possible while respecting the video ratio
     videoRatio = $('#center').width() / $('#center').height();
+    center_media_width = $(window).width();
+    center_media_height = $(window).height();
+    if (center_media_height > center_media_width / videoRatio) {
+        center_media_height = center_media_width / videoRatio;
+    } else {
+        center_media_width = center_media_height * videoRatio;
+    }
+
     if ($('#left_media').length > 0) {
         left_media_width = 600;
         left_move_div_width = center_media_width / 8;
@@ -23,15 +33,6 @@ $(document).ready(function () {
         top_media_height = 350;
         top_move_div_height = center_media_height / 8;
         gradient_y_delta = 75;
-    }
-
-    // set width and height of center media in order to make it the biggest possible while respecting the video ratio
-    center_media_width = $(window).width();
-    center_media_height = $(window).height();
-    if (center_media_height > center_media_width / videoRatio) {
-        center_media_height = center_media_width / videoRatio;
-    } else {
-        center_media_width = center_media_height * videoRatio;
     }
 
     // other config
@@ -55,13 +56,12 @@ $(document).ready(function () {
 
     // map init
     $(".map").each(function (index) {
-        console.log(index);
         var mapId = "inner_map_" + index;
         var map, layer, markers;
 
         $(this).append("<div class='comments'></div>");
         $(this).append("<div id='" + mapId + "'></div>");
-        $('#' + mapId).width(left_media_width)
+        $('#' + mapId).width(left_media_width)//FIXME: don't use left_media_width
             .height(center_media_height);
         map = new OpenLayers.Map(mapId, {numZoomLevels: 2});
         layer = new OpenLayers.Layer.OSM("Simple OSM Map");
