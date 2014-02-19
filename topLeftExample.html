@@ -37,6 +37,7 @@
 <![endif]-->
 
 <!--top_media div is optional-->
+<!--TODO: for the moment, top_media can only be a slider, but this will be fixed soon!-->
 <div id='top_media' height="350" class="slider">
     <ul class="slides">
         <li class="slide" timePosition='02'><img height="350" src="img/Alan_Turing_Aged_16.jpg"
@@ -49,9 +50,22 @@
                                                   alt="File:Alan Turing photo.jpg"></li>
     </ul>
 </div>
+<!--<div id='top_media' class='map'>-->
+    <!--<ul class="locations">-->
+        <!--<li class="location" timePosition='04' longitude='-0.173' latitude='51.5172'>Alan Turing né à Paddington.</li>-->
+        <!--<li class="location" timePosition='20' longitude='-2.5183' latitude='50.9491'>Il entre à la Sherborne School en-->
+            <!--1927.-->
+        <!--</li>-->
+        <!--<li class="location" timePosition='45' longitude='1.404058' latitude='43.577702'>Ici c'est le Mirail!</li>-->
+        <!--<li class="location" timePosition='85' longitude='1.44126' latitude='43.59576'>Ici c'est chez moi...</li>-->
+        <!--<li class="location" timePosition='95' longitude='1.36065' latitude='44.00939'>et ici c'est le Mirail aussi.-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
 
 <!--left_media div is optional-->
-<div id='left_media'>
+<!--TODO: for the moment, left_media can only be a map, but this will be fixed soon!-->
+<div id='left_media' class='map'>
     <ul class="locations">
         <li class="location" timePosition='04' longitude='-0.173' latitude='51.5172'>Alan Turing né à Paddington.</li>
         <li class="location" timePosition='20' longitude='-2.5183' latitude='50.9491'>Il entre à la Sherborne School en
@@ -62,18 +76,29 @@
         <li class="location" timePosition='95' longitude='1.36065' latitude='44.00939'>et ici c'est le Mirail aussi.
         </li>
     </ul>
-    <div class='comments'></div>
-    <div id='map'></div>
 </div>
+<!--<div id='left_media' height="350" class="slider">-->
+    <!--<ul class="slides">-->
+        <!--<li class="slide" timePosition='02'><img height="350" src="img/Alan_Turing_Aged_16.jpg"-->
+                                                 <!--alt="File:Alan Turing photo.jpg"></li>-->
+        <!--<li class="slide" timePosition='22'><img height="350" src="img/Alan_Turing_photo.jpg"-->
+                                                 <!--alt="File:Alan Turing photo.jpg"></li>-->
+        <!--<li class="slide" timePosition='82'><img height="350" src="img/Bombe-rebuild.jpg"-->
+                                                 <!--alt="File:Alan Turing photo.jpg"></li>-->
+        <!--<li class="slide" timePosition='122'><img height="350" src="img/Turing_Plaque.jpg"-->
+                                                  <!--alt="File:Alan Turing photo.jpg"></li>-->
+    <!--</ul>-->
+<!--</div>-->
+
 
 <!--center div is compulsory and has to be a video element-->
 <video id="center" class="projekktor" poster="img/Alan_Turing_photo.jpg" width="480" height="204">
   <source src="media/legoTuringMachine-480-204.mp4" />
 </video>
 
-<img id="leftArrow" class="imageOverVideo arrow" src="img/leftArrow.svg" alt="left arrow">
-<img id="upArrow" class="imageOverVideo arrow" src="img/upArrow.svg" alt="up arrow">
-<img id="topGradient" class="imageOverVideo" src="img/gradient.svg" alt="gradient">
+<!--<img id="leftArrow" class="imageOverVideo arrow" src="img/leftArrow.svg" alt="left arrow">-->
+<!--<img id="upArrow" class="imageOverVideo arrow" src="img/upArrow.svg" alt="up arrow">-->
+<!--<img id="topGradient" class="imageOverVideo" src="img/gradient.svg" alt="gradient">-->
 
 <!-- <div id="info">information about licenses or anything</div> -->
 
